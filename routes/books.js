@@ -1,5 +1,3 @@
-const { model } = require('mongoose')
-
 const router = require('express').Router()
 
 //GET all books

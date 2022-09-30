@@ -3,7 +3,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 
-const bookroutes = require('./routes/books')
+const bookRoutes = require('./routes/books')
+const userRoutes = require('./routes/user')
 
 //express app
 const app = express()
@@ -18,7 +19,8 @@ app.use((req, res, next) => {
 })
 
 //attach routes to app
-app.use('/books',bookroutes)
+app.use('/books',bookRoutes)
+app.use('/user', userRoutes)
 
 const PORT = process.env.PORT
 
