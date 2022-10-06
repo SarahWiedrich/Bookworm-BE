@@ -1,14 +1,7 @@
-const {  getAllBooks } = require('../controllers/booksController')
+const {   } = require('../controllers/userController')
 
 const router = require('express').Router()
 
-//GET all books
-router.get('/all', getAllBooks)
-
-//GET single book
-router.get('/:id', (req, res) => {
-    res.json({message:'GET single book'})
-})
 
 //POST add book to favorites
 router.post('/add', (req, res) => {
@@ -21,3 +14,15 @@ router.delete('/:id', (req, res) => {
 })
 
 module.exports = router
+
+
+
+
+
+// //GET all books
+// router.get('/all', getAllBooks)
+
+// //GET single book
+// router.get('/:id', (req, res) => {
+//     res.json({message:'GET single book'})
+// })
