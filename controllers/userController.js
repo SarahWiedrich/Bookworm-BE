@@ -1,5 +1,6 @@
 const User = require('../models/userProfile')
 const mongoose = require('mongoose')
+const { signToken } = require('../utility/auth')
 
 //create user
 const createUser = async (req, res) => {
