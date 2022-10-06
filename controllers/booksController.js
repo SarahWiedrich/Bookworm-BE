@@ -1,24 +1,35 @@
-const Books = require('../models/booksModel.js')
+const Books = require('../models/usersBooks.js')
 const mongoose = require('mongoose')
+const axios = require('axios')
 
 //API Key
-const API_KEY = 'AIzaSyDonUVSdXGs-hz8LeRui7UGxOI9rln3dOs'
+const API_KEY = process.env.API_KEY
 
 //API link
 const API_URL = 'https://www.googleapis.com/books/v1/volumes?q=search+terms'
-const searchByTitle = `https://www.googleapis.com/books/v1/volumes?q=${intitle}&key=${API_KEY}`
-const searchByAuthor = `https://www.googleapis.com/books/v1/volumes?q=${inauthor}`
-const searchBySubject = `https://www.googleapis.com/books/v1/volumes?q=${subject}`
+// const searchByTitle = `https://www.googleapis.com/books/v1/volumes?q=${intitle}&key=${API_KEY}`
+// const searchByAuthor = `https://www.googleapis.com/books/v1/volumes?q=${inauthor}`
+// const searchBySubject = `https://www.googleapis.com/books/v1/volumes?q=${subject}`
 
 //search all books
 const getAllBooks = async (req, res) => {
+    // axios({
+    //     url: API_URL,
+    //     responseType: 'json'
+    // })
+    // .then(async response => {
+    //     const bookData = response.data;
+    //     res.render(bookData)
+    // })
     try{
         const books = await fetch(API_URL)
         return await books.json()
+        
     } catch (err) {
         console.error(err)
     }
 }
+
 
 //search by title
 const getBookByTitle = async (req, res) => {

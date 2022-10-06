@@ -1,6 +1,6 @@
 const { 
     getAllBooks
- } = require('../controllers/booksControler')
+ } = require('../controllers/booksController')
 
 const router = require('express').Router()
 
