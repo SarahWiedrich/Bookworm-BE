@@ -1,9 +1,11 @@
+const { 
+    getAllBooks
+ } = require('../controllers/booksControler')
+
 const router = require('express').Router()
 
 //GET all books
-router.get('/all', (req, res) => {
-    res.json({message: 'GET all books'})
-})
+router.get('/all', getAllBooks)
 
 //GET single book
 router.get('/:id', (req, res) => {
