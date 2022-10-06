@@ -39,10 +39,15 @@ userSchema.pre('save', async function (next) {
     next();
   });
   
-  // custom method to compare and validate password for logging in
+  // method to compare and validate password for logging in
 userSchema.methods.isCorrectPassword = async function (password) {
     return bcrypt.compare(password, this.password);
   };
+
+
+module.exports = mongoose.model('User', userSchema)
+
+
 
 // // validate password return error if less than 8 characters
 // userSchema.pre('save', function(next) {
@@ -57,5 +62,3 @@ userSchema.methods.isCorrectPassword = async function (password) {
 //         }
 //     })
 // })
-
-module.exports = mongoose.model('User', userSchema)

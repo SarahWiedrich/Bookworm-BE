@@ -13,6 +13,13 @@ const API_URL = 'https://www.googleapis.com/books/v1/volumes?q=search+terms'
 
 //search all books
 const getAllBooks = async (req, res) => {
+    try{
+        const books = await fetch(API_URL)
+        return await books.json()
+        
+    } catch (err) {
+        console.error(err)
+    }
     // axios({
     //     url: API_URL,
     //     responseType: 'json'
@@ -21,13 +28,6 @@ const getAllBooks = async (req, res) => {
     //     const bookData = response.data;
     //     res.render(bookData)
     // })
-    try{
-        const books = await fetch(API_URL)
-        return await books.json()
-        
-    } catch (err) {
-        console.error(err)
-    }
 }
 
 

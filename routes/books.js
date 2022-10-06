@@ -1,6 +1,4 @@
-const { 
-    getAllBooks
- } = require('../controllers/booksController')
+const {  getAllBooks } = require('../controllers/booksController')
 
 const router = require('express').Router()
 
