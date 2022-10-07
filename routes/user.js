@@ -5,6 +5,7 @@ const router = require('express').Router()
 //create new user
 router.post('/new', createUser)
 
+//login user
 router.post('/login', loginUser)
 
 //get user profile page

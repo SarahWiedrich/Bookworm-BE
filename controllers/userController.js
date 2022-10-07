@@ -6,6 +6,7 @@ const { signToken } = require('../utility/auth')
 const createUser = async (req, res) => {
     try {
         const user = await User.create(req.body);
+        res.status(202).json({ message: "accepted" })
     } catch (error) {
         res.status(400).json({ "message": String(error) })
     }
@@ -13,7 +14,7 @@ const createUser = async (req, res) => {
 
 const loginUser = async ({ body }, res) => {
     const user = await User.findOne({
-        $or: [{ username: body.username }, { email: body.email }]
+        $or: [{ username: body.username }]
     });
     if (!user) {
         res.status(400).json({ message: 'Cannot find user' });
