@@ -29,6 +29,7 @@ const loginUser = async ({ body }, res) => {
       }
 }
 
+
 module.exports = {
     createUser,
     loginUser,
