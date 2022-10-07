@@ -8,9 +8,11 @@ router.post('/new', createUser)
 //login user
 router.post('/login', loginUser)
 
-//get user profile page
-router.get('/:id', (req,res) => {
-    res.json({message: 'GET user profile'})
-})
+
+
+// //get user profile page
+// router.get('/:id', (req,res) => {
+//     res.json({message: 'GET user profile'})
+// })
 
 module.exports = router

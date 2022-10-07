@@ -12,6 +12,7 @@ const createUser = async (req, res) => {
     }
 }
 
+//login user
 const loginUser = async ({ body }, res) => {
     const user = await User.findOne({
         $or: [{ username: body.username }]
