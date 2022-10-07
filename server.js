@@ -10,8 +10,9 @@ const userRoutes = require('./routes/user')
 const app = express()
 
 //middleware
+app.use(cors("*"))
 app.use(express.json())
-app.use(cors())
+
 
 app.use((req, res, next) => {
     console.log(req.path, req.method)
