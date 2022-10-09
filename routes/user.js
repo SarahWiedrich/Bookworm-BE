@@ -1,4 +1,4 @@
-const { createUser, loginUser } = require('../controllers/userController')
+const { createUser, loginUser, getSingleUser } = require('../controllers/userController')
 
 const router = require('express').Router()
 
@@ -8,7 +8,8 @@ router.post('/new', createUser)
 //login user
 router.post('/login', loginUser)
 
-
+// Single User Login
+router.post('/me', getSingleUser)
 
 // //get user profile page
 // router.get('/:id', (req,res) => {
