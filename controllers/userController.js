@@ -30,6 +30,17 @@ const loginUser = async ({ body }, res) => {
         }
       }
 }
+// Get a Single User
+const getSingleUser = async ({ user = null, params }, res) => {
+  const foundUser = await User.findOne({
+    $or: [{ _id: user ? user._id : params.id }, { username: params.username }],
+  });
+  if (!foundUser) {
+    return res.status(400).json({ message: 'Cannot find a user with this id!' });
+  }
+
+  res.json(foundUser);
+}
 
 // save a book to a user's `savedBooks` field by adding it to the set (to prevent duplicates)
 // user comes from `req.user` created in the auth middleware function
@@ -66,4 +77,5 @@ module.exports = {
     loginUser,
     saveBook,
     deleteBook,
+    getSingleUser,
 }
