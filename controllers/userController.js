@@ -31,7 +31,7 @@ const loginUser = async ({ body }, res) => {
       }
 }
 // Get a Single User
-const getSingleUser = async ({ body }) => {
+const getSingleUser = async ({ body },res) => {
   const foundUser = await User.findOne({
     $or: [{ _id: body.id }, { username: body.username }],
   });
