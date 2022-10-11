@@ -23,7 +23,8 @@ const userSchema = new Schema ({
         default: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngkey.com%2Fmaxpic%2Fu2q8r5t4i1y3q8i1%2F&psig=AOvVaw2QFcjXZ4JkvYq1TxAEB6cZ&ust=1664644304800000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJD27eiBvfoCFQAAAAAdAAAAABAD"
     },
     bio: {
-        type: String
+        type: String,
+        required: true
     },
     savedBooks: [bookSchema]
 }, { timestamps: true })
