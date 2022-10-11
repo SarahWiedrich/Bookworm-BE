@@ -20,7 +20,7 @@ const userSchema = new Schema ({
     },
     profilePic: {
         type: String,
-        default: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngkey.com%2Fmaxpic%2Fu2q8r5t4i1y3q8i1%2F&psig=AOvVaw2QFcjXZ4JkvYq1TxAEB6cZ&ust=1664644304800000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJD27eiBvfoCFQAAAAAdAAAAABAD"
+        default: "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
     },
     bio: {
         type: String
