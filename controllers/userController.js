@@ -31,9 +31,9 @@ const loginUser = async ({ body }, res) => {
   }
 };
 // Get a Single User
-const getSingleUser = async ({ user = null, params }, res) => {
+const getSingleUser = async ({ body }) => {
   const foundUser = await User.findOne({
-    $or: [{ _id: user ? user._id : params.id }, { username: params.username }],
+    $or: [{ _id: body.id }, { username: body.username }],
   });
   if (!foundUser) {
     return res
