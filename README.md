@@ -26,8 +26,8 @@ Dotenv
 | Method        | Path                     | Purpose                                          |
 | ------------- | ------------------------ | -------------------------------------------------|
 | :---          |  :---                    | :---                                             |
-| GET           | /                        | Get all books                                    |
-| GET           | /:id                     | Get one book                                     |
-| POST          | /                        | Add to favorites                                 |
+| POST          | /new                     | Create a new user                                |
+| POST          | /login                   | Log in a user                                    |
+| POST          | /me                      | Get the logged in users profile page             |
 | DELETE        | /:id                     | Delete a favorite                                |
 
