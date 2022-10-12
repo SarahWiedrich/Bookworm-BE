@@ -1,6 +1,6 @@
-BOOKWORM - Discover something new! Find your next adventure with Bookworm! Here, useres are able to browse 100's of different books. Search by genre, author or title. There is something for everyone! Save your favoites and track what you've already read by creating a profile page.
+BOOKWORM - Discover something new! Find your next adventure with Bookworm! Here, useres are able to browse 100's of different books. Search by author, title or keyword. There is something for everyone! Save your favoites and track what you've already read by creating a profile page.
 
-Frontend github link: https://github.com/...
+Frontend github link: https://github.com/JeffFranklin36/bookworm-fe.git
 
 MERN App created by 
 
@@ -13,11 +13,21 @@ Back End:
 Sarah Wiedrich https://github.com/SarahWiedrich
 Edward Ziemba https://github.com/esziemba
 
+To run the backend install these dependices:
+Express
+Mongoose
+Jsonwebtoken
+Cors
+Bcyrpt
+Dotenv
+
+
+
 | Method        | Path                     | Purpose                                          |
 | ------------- | ------------------------ | -------------------------------------------------|
 | :---          |  :---                    | :---                                             |
-| GET           | /                        | Get all books                                    |
-| GET           | /:id                     | Get one book                                     |
-| POST          | /                        | Add to favorites                                 |
+| POST          | /new                     | Create a new user                                |
+| POST          | /login                   | Log in a user                                    |
+| POST          | /me                      | Get the logged in users profile page             |
 | DELETE        | /:id                     | Delete a favorite                                |
 
